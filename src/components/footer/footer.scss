@@ -1,0 +1,234 @@
+.footer {
+    background-color: #2C2927;
+    color: #fff;
+
+    span a {
+        text-decoration: underline;
+    }
+
+    .footer__custom-checkbox {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        user-select: none;
+    }
+
+    .footer__custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .footer__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: #eee;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .footer__custom-checkbox input:checked~.footer__checkmark {
+        background-color: #2196f3;
+        /* Зміни колір тут */
+    }
+
+    .footer__checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .footer__custom-checkbox input:checked~.footer__checkmark::after {
+        display: block;
+    }
+
+
+    &__logo {
+        // margin-left: 100%;
+        // margin-top: 100%;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        align-self: end;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 100px;
+        grid-row-gap: 44px;
+
+
+        .footer__listItem {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .footer__listItemLi {
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    &__topSection {
+        display: flex;
+    }
+
+    &__email-button {
+        max-width: 100%;
+
+    }
+
+    &__email,
+    &__button {
+        max-width: 100%;
+        width: 100%;
+        // height: 46px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 16px;
+        background: #fff;
+        cursor: pointer;
+        height: 48px;
+
+        margin: 8px 0px;
+    }
+
+    &__email {
+        background-color: #2C2927;
+        color: #BFBFBF;
+        border: 1px solid #fff;
+        padding: 12px 16px;
+    }
+
+    &__arrowTop {
+        cursor: pointer;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__checkbox {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+    }
+
+    label {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    label::after {
+        content: "";
+        position: absolute;
+        display: none;
+        width: 6px;
+        height: 11px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    /* Показати галочку, коли чекбокс вибраний */
+    .footer__checkbox:checked+label::after {
+        display: block;
+    }
+
+
+
+    &__section {
+        width: 50%;
+        padding: 40px;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 57.6px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__section:first-child {
+        border-right: 2px #fff solid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__titleSection {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 40px;
+
+        .footer__arrowTop {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+    }
+
+    &__nameCompany {
+        // width: calc(100% + 80px);
+        // max-width: 100%;
+        // width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px #fff solid;
+        border-top: 2px #fff solid;
+        padding: 27px 40px;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
